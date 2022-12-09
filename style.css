@@ -1,10 +1,12 @@
 /*1. General styling*/
 :root {
+	--colro-darkblue: #021b79;
 	--color-midnightblue: #2980b9;
 	--color-brightnavyblue: #6dd5fa;
 	--color-safetyorange: #f17105;
 	--color-blackchocolate: #1f1300;
 	--color-cultured: #f0edee;
+    --color-lightgrey: #e5e5e5;
 }
 
 * {
@@ -31,18 +33,12 @@ section {
 	padding-right: 0.8rem;
 }
 
-footer {
-	background: #000046;
-	color: white;
-	padding: 2rem 2rem 2rem 4rem;
-
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
 button {
 	all: unset; /* Remove all original button styles*/
+}
+
+a {
+	text-decoration: none;
 }
 
 /*1.1 Specific styles*/
@@ -97,11 +93,19 @@ button {
 	height: 5rem;
 }
 
+.sticky .nav_link {
+	color: black;
+}
+
 .nav_logo {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-weight: 500;
+}
+
+#nav_logoImg{
+    width: 30px;
 }
 
 #nav_logoName {
@@ -122,16 +126,17 @@ button {
 	font-weight: bold;
 }
 
-.nav_item:hover {
-	color: var(--color-safetyorange);
-	transition: 0.3s;
-}
-
 .nav_link {
 	text-decoration: none;
 	display: block;
 	font-size: 1.2rem;
-	color: inherit;
+	color: white;
+	transition: 0.3s ease;
+}
+
+.nav_link:hover {
+	color: var(--color-safetyorange);
+	transition: 0.3s ease;
 }
 
 /*3. Header styling*/
@@ -157,7 +162,7 @@ button {
 /*3.1 - Left side of intro section*/
 #intro_img {
 	max-width: 350px;
-	height: 100%;
+	height: 350px;
 	display: block;
 }
 
@@ -250,6 +255,7 @@ button {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+    width: 100%;
 }
 
 .section_header {
@@ -270,24 +276,118 @@ button {
 }
 
 /*4.1 Portfolio Section*/
-#portfolioRow {
+#portfolio_row {
 	background-color: var(--color-cultured);
 }
 
 .section_subtitle {
-    color: var(--color-safetyorange);
-    font-size: 1.2rem;
-    line-height: 1;
+	font-size: 1.2rem;
+	line-height: 1;
+}
+
+.title_orange {
+	color: var(--color-safetyorange);
+}
+
+.title_white {
+	color: white;
 }
 
 .section_title {
-    font-size: 1.5rem;
-    padding-bottom: 1.5rem;
+	font-size: 1.5rem;
+	padding-bottom: 1.5rem;
 }
 
-/*4.2 Skills Section*/
-#skillsRow {
-	background-color: var(--color-midnightblue);
+/*4.2 Werkervaring Section*/
+#werkervaring_row {
+	background-color: var(--colro-darkblue);
+}
+
+.timeline {
+}
+
+/*4.3 Skills Section*/
+
+/*4.4 Contact Section*/
+.section_form {
+	display: flex;
+	flex-direction: column;
+}
+.section_form label {
+	font-weight: bold;
+}
+
+.section_form input{
+    padding: 0.4rem 0.8rem;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: var(--color-lightgrey);
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.section_form input:focus{
+    padding: 0.4rem 0.8rem;
+    outline: 1px;
+    outline-color: var(--color-safetyorange);
+    outline-style: solid;
+}
+
+.section_form_required{
+    color: red;
+}
+
+.section_form_button{
+    background-color: var(--color-safetyorange);
+    border-radius: 2px;
+    margin-top: 10px;
+    
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.section_form_textarea{
+    padding: 0.4rem 0.8rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--color-lightgrey);
+    border-radius: 2px;
+}
+
+.section_form_textarea:focus{
+    outline: none;
+    border-color: var(--color-safetyorange);
+}
+
+/*Footer*/
+footer {
+	background: #000046;
+	color: white;
+	padding: 2rem 4rem 2rem 4rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.social_buttons{
+    display: flex;
+}
+
+.social_btn{
+
+}
+
+#linkedin_btn{
+
+}
+
+#instagram_btn{
+
 }
 
 /* Mobile */
@@ -315,4 +415,13 @@ button {
 			'Second';
 		grid-template-columns: 1fr;
 	}
+
+	.section_content {
+		padding-bottom: 1rem;
+	}
+
+    /*Footer styling*/
+    footer{
+        padding: 2rem 2rem 2rem 2rem;
+    }
 }
