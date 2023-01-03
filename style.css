@@ -4,6 +4,7 @@
 	--color-midnightblue: #2980b9;
 	--color-brightnavyblue: #6dd5fa;
 	--color-safetyorange: #f17105;
+    --color-darkerorange: #c85c04;
 	--color-blackchocolate: #1f1300;
 	--color-cultured: #f0edee;
     --color-lightgrey: #e5e5e5;
@@ -314,6 +315,21 @@ a {
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+    display: flex;
+    gap: 0.3rem;
+}
+
+.section_project_button{
+    transition: background 0.4s;
+}
+
+.section_project_button:hover{
+    background-color: var( --color-darkerorange);
+    transition: 0.4s;
+}
+
+.section_project_button_icon{
+    width: 30px;
 }
 
 /*4.1.1 Slider component*/
@@ -423,6 +439,15 @@ a {
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+}
+
+.section_form_button{
+    transition: background 0.4s;
+}
+
+.section_form_button:hover{
+    background-color: var( --color-darkerorange);
+    transition: 0.4s;
 }
 
 .section_form_textarea{
