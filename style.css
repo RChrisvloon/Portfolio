@@ -234,7 +234,7 @@ a {
 
 /*4. Section styling */
 .section {
-	min-height: 50rem;
+	min-height: 40rem;
 	width: 100%;
 	display: flex;
 }
@@ -265,7 +265,7 @@ a {
 }
 
 .section_content {
-	padding-bottom: 10rem;
+	padding-bottom: 3rem;
 }
 
 .section_project {
@@ -273,6 +273,11 @@ a {
 	gap: 2.4rem;
 	grid-template-areas: 'First Second';
 	grid-template-columns: 1fr 1fr;
+}
+
+.section_projectDetails{
+    display: flex;
+    flex-direction: column;
 }
 
 /*4.1 Portfolio Section*/
@@ -295,7 +300,77 @@ a {
 
 .section_title {
 	font-size: 1.5rem;
-	padding-bottom: 1.5rem;
+}
+
+.section_project_button{
+    background-color: var(--color-safetyorange);
+    border-radius: 5px;
+    margin-top: auto;
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    max-width: fit-content;
+    
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*4.1.1 Slider component*/
+.slider {
+    margin: 0 auto;
+    position: relative;
+    margin-right: 1rem;
+    overflow: hidden;
+}
+
+.slides{
+    display: flex;
+    transition: 1s;
+}
+
+.slide{
+    display: flex;
+    flex: 0 0 100%;
+    transition: transform 1s;
+    background-color: lightblue;
+    padding: 1rem;
+}
+
+.slide_image{
+    width: 300px;
+    object-fit: contain;
+}
+
+.slider_controls{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.slider_btn{
+	border-radius: 5px;
+	background-color: var(--color-safetyorange);
+    width: 2rem;
+    height: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+	font-weight: bold;
+	font-size: 20px;
+    cursor: pointer;
+}
+
+.slider_btnLeft{
+    background-color: var(--colro-darkblue);
+}
+
+.slider_btnRight{
+    background-color: var(--colro-darkblue);
 }
 
 /*4.2 Werkervaring Section*/
@@ -410,16 +485,22 @@ footer {
 		margin-left: 0;
 	}
 	.section_project {
-		grid-template-areas:
-			'First'
-			'Second';
-		grid-template-columns: 1fr;
+		display: flex;
+        flex-direction: column;
 	}
 
 	.section_content {
 		padding-bottom: 1rem;
 	}
 
+    /* Portfolio section */
+    .slide{
+        gap: 0.5rem;
+    }
+
+    .slide_image{
+        width: 100%;
+    }
     /*Footer styling*/
     footer{
         padding: 2rem 2rem 2rem 2rem;

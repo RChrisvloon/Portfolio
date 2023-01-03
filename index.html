@@ -57,22 +57,61 @@
 					<div class="section_header">
 						<h4 class="section_subtitle title_orange">Portfolio</h4>
 						<h3 class="section_title">Projecten waar ik aan heb gewerkt</h3>
+						<div class="slider_controls">
+							<button class="slider_btn slider_btnLeft">&larr;</button>
+							<div class="progress">
+								<span id="progress_current">01</span>
+								<span id="progress_divider">/</span>
+								<span id="progress_total">00</span>
+							</div>
+							<button class="slider_btn slider_btnRight">&rarr;</button>
+						</div>
 					</div>
 					<div class="section_content">
-						<div class="section_project">
-							<div class="section_projectDetails">
-								<h1>Mijn eerste project</h1>
-								<p>
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, quod eveniet? Quod distinctio ad illo perspiciatis corrupti at, voluptates repudiandae harum voluptate, delectus excepturi sed! Accusantium atque
-									esse incidunt error?
-								</p>
+						<!-- Slider component -->
+						<div class="slider">
+							<div class="slides">
+								<!-- Project Slide 1-->
+								<div class="slide section_project">
+									<div class="section_projectDetails">
+										<h1>Mijn eerste project</h1>
+										<p>
+											Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, quod eveniet? Quod distinctio ad illo perspiciatis corrupti at, voluptates repudiandae harum voluptate, delectus excepturi sed!
+											Accusantium atque esse incidunt error?
+										</p>
+										<button class="section_project_button">Zie project</button>
+									</div>
+									<img class="slide_image" src="images/placeholder_img.jpg" alt="" />
+								</div>
+								<!-- Project Slide 2-->
+								<div class="slide section_project">
+									<div class="section_projectDetails">
+										<h1>Mijn tweede project</h1>
+										<p>
+											Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, quod eveniet? Quod distinctio ad illo perspiciatis corrupti at, voluptates repudiandae harum voluptate, delectus excepturi sed!
+											Accusantium atque esse incidunt error?
+										</p>
+										<button class="section_project_button">Zie project</button>
+									</div>
+									<img class="slide_image"" src="images/placeholder_img.jpg" alt="" />
+								</div>
+								<!-- Project Slide 3-->
+								<div class="slide section_project">
+									<div class="section_projectDetails">
+										<h1>Mijn derde project</h1>
+										<p>
+											Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, quod eveniet? Quod distinctio ad illo perspiciatis corrupti at, voluptates repudiandae harum voluptate, delectus excepturi sed!
+											Accusantium atque esse incidunt error?
+										</p>
+										<button class="section_project_button">Zie project</button>
+									</div>
+									<img class="slide_image" src="images/placeholder_img.jpg" alt="" />
+								</div>
 							</div>
-							<img style="max-width: 300px" src="images/placeholder_img.jpg" alt="" />
 						</div>
 					</div>
 				</div>
 			</section>
-
 			<!-- Werkervaring -->
 			<section class="section" id="werkervaring_row">
 				<div class="section_inner">
@@ -93,23 +132,16 @@
 						<h3 class="section_title">Ik sta open voor een gesprek!</h3>
 					</div>
 					<div class="section_content">
-						<!-- Contact form -->
 						<form action="POST" class="section_form">
-							<label for="name">
-								Name<span class="section_form_required">*</span>								
-							</label>
-                            <input type="text" name="name" placeholder="Uw naam" required/>
-                            
-                            <label for="email">
-								Email<span class="section_form_required">*</span>
-							</label>
-                            <input type="text" name="email" placeholder="Uw emailadres" required/>
+							<label for="name"> Name<span class="section_form_required">*</span> </label>
+							<input type="text" name="name" placeholder="Uw naam" required />
 
-                            <label for="message">
-								Message<span class="section_form_required">*</span>
-							</label>
-                            <textarea class="section_form_textarea" rows="10" placeholder="Beste Chris, ik zou het graag willen hebben over..." required></textarea>
-                            <button class="section_form_button">Send</button>
+							<label for="email"> Email<span class="section_form_required">*</span> </label>
+							<input type="text" name="email" placeholder="Uw emailadres" required />
+
+							<label for="message"> Message<span class="section_form_required">*</span> </label>
+							<textarea class="section_form_textarea" rows="10" placeholder="Beste Chris, ik zou het graag willen hebben over..." required></textarea>
+							<button class="section_form_button">Send</button>
 						</form>
 					</div>
 				</div>

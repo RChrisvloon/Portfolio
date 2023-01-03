@@ -13,7 +13,7 @@ const intro_information = document.getElementById('intro_information');
 
 const backToTop_btn = document.getElementById('backToTop_btn');
 
-// Sticky navigation eventlistener
+// 1. Sticky navigation eventlistener
 window.addEventListener('scroll', function () {
 	if (window.scrollY > 0) {
 		nav.classList.add('sticky');
@@ -35,15 +35,15 @@ window.addEventListener('scroll', function () {
 	}
 });
 
-// Scroll back to top button
+// 2. Scroll back to top button
 const scrollToTop = function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth',
+	});
 };
 
-// Reveal section animation
+// 3. Reveal section animation
 const allSections = document.querySelectorAll('.section_inner');
 const revealSection = function (entries, observer) {
 	const [entry] = entries;
@@ -70,31 +70,49 @@ allSections.forEach(function (section) {
 	section.classList.add('section_hidden');
 });
 
-// // Lazy loading images
-// const imgTargets = document.querySelectorAll('img[data-src]');
+// 4. Slider Component
+const slides = document.querySelectorAll('.slide');
+const btnLeft = document.querySelector('.slider_btnLeft');
+const btnRight = document.querySelector('.slider_btnRight');
+const slideProgress_current = document.getElementById('progress_current');
+const slideProgress_total = document.getElementById('progress_total');
+const slidesWrapper = document.querySelector('.slides');
 
-// const loadImg = function (entries, observer) {
-// 	const [entry] = entries;
+let currentSlide = 0;
+const amountOfSlides = slides.length;
 
-// 	if (!entry.isIntersecting) {
-// 		return;
-// 	}
+// Change value of totalAmount of slides in the slider component
+slideProgress_total.textContent = (amountOfSlides < 10 ? `0${amountOfSlides}` : amountOfSlides);
 
-// 	// Replace the low resolution image with the data_src
-// 	entry.target.src = entry.target.dataset.src;
+// Set the new translateX values to create the 'sliding'-effect
+const goToSlide = function (slide) {
+    slidesWrapper.style.transform = `translateX(${-100 * slide}%)`
 
-// 	// Remove blur when the image finishes loading
-// 	entry.target.addEventListener('load', function () {
-// 		entry.target.classList.remove('lazy_img');
-//         console.log(`Weghalen blur bij: ${entry.target}`);
-// 	});
+    // Change value of currentslide in slider component
+    slideProgress_current.textContent = (currentSlide < 9 ? `0${currentSlide + 1}` : (currentSlide + 1));
+};
 
-//     observer.unobserve(entry.target);
-// };
+// Button to go to next slide
+const nextSlide = function () {
+	if (currentSlide == amountOfSlides - 1) {
+		currentSlide = 0;
+	} else {
+		currentSlide++;
+	}
 
-// const imgObserver = new IntersectionObserver(loadImg, {
-// 	root: null,
-// 	threshold: 0,
-// });
+	goToSlide(currentSlide);
+};
 
-// imgTargets.forEach(img => imgObserver.observe(img));
+const previousSlide = function () {
+	if (currentSlide == 0) {
+		currentSlide = maxSlide - 1;
+	} else {
+        currentSlide--;
+	}
+
+	goToSlide(currentSlide);
+};
+
+// Next/previous slidebutton eventlisteners
+btnRight.addEventListener('click', nextSlide);
+btnLeft.addEventListener('click', previousSlide);
