@@ -10,6 +10,7 @@ const introSection = document.querySelector('.intro');
 const intro_header = document.getElementById('intro_header');
 const intro_subheader = document.getElementById('intro_subheader');
 const intro_information = document.getElementById('intro_information');
+const introImg = document.getElementById('intro_img');
 
 const backToTop_btn = document.getElementById('backToTop_btn');
 
@@ -33,6 +34,24 @@ window.addEventListener('scroll', function () {
 		// Hide the back to the top button
 		backToTop_btn.style.display = 'none';
 	}
+});
+
+const checkHeaderImage = function() {
+    if(window.innerWidth < 858){
+        introImg.src="images/chris_italy_wide.jpg";
+    }
+    else if(window.innerWidth == 858){
+        introImg.src="images/chris_italy_wide.jpg";
+    }
+    else{
+        introImg.src="images/chris_italy.jpg"; 
+    }
+}
+// 
+checkHeaderImage();
+
+window.addEventListener('resize', function() {
+    checkHeaderImage();
 });
 
 // 2. Scroll back to top button
@@ -82,14 +101,14 @@ let currentSlide = 0;
 const amountOfSlides = slides.length;
 
 // Change value of totalAmount of slides in the slider component
-slideProgress_total.textContent = (amountOfSlides < 10 ? `0${amountOfSlides}` : amountOfSlides);
+slideProgress_total.textContent = amountOfSlides < 10 ? `0${amountOfSlides}` : amountOfSlides;
 
 // Set the new translateX values to create the 'sliding'-effect
 const goToSlide = function (slide) {
-    slidesWrapper.style.transform = `translateX(${-100 * slide}%)`
+	slidesWrapper.style.transform = `translateX(${-100 * slide}%)`;
 
-    // Change value of currentslide in slider component
-    slideProgress_current.textContent = (currentSlide < 9 ? `0${currentSlide + 1}` : (currentSlide + 1));
+	// Change value of currentslide in slider component
+	slideProgress_current.textContent = currentSlide < 9 ? `0${currentSlide + 1}` : currentSlide + 1;
 };
 
 // Button to go to next slide
@@ -107,7 +126,7 @@ const previousSlide = function () {
 	if (currentSlide == 0) {
 		currentSlide = maxSlide - 1;
 	} else {
-        currentSlide--;
+		currentSlide--;
 	}
 
 	goToSlide(currentSlide);

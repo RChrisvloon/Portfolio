@@ -22,22 +22,22 @@
 					<img id="nav_menuBtn" src="images/menu_white.svg" alt="" />
 					<ul class="nav_links">
 						<li class="nav_item">
-							<a class="nav_link" href="#">Home</a>
+							<a class="nav_link" href="#" id="nav_home">Home</a>
+						</li>
+						<!-- <li class="nav_item">
+							<a class="nav_link" href="about.html" id="nav_about">Over mij</a>
+						</li> -->
+						<li class="nav_item">
+							<a class="nav_link" href="portfolio" id="nav_portfolio">Portfolio</a>
 						</li>
 						<li class="nav_item">
-							<a class="nav_link" href="overmij">Over mij</a>
-						</li>
-						<li class="nav_item">
-							<a class="nav_link" href="portfolio">Portfolio</a>
-						</li>
-						<li class="nav_item">
-							<a class="nav_link" href="contact">Contact</a>
+							<a class="nav_link" href="contact" id="nav_contact">Contact</a>
 						</li>
 					</ul>
 				</nav>
 				<!--Introduction of myself-->
 				<section id="intro">
-					<img id="intro_img" src="images/Chris_pic1.jpg" title="Introductiefoto van mijzelf." alt="Introductiefoto van mijzelf." />
+					<img id="intro_img" src="images/chris_italy.jpg" title="Introductiefoto van mijzelf." alt="Introductiefoto van mijzelf." />
 					<div id="intro_right">
 						<h1 id="intro_header">Hi, ik ben <span class="highlightedText">Chris</span></h1>
 						<p id="intro_subheader">Front- en backend developer</p>
@@ -95,9 +95,9 @@
 											Accusantium atque esse incidunt error?
 										</p>
 										<button class="section_project_button">
-                                            <img class="section_project_button_icon" src="images/searchicon.svg" />
-                                            Zie project
-                                        </button>
+											<img class="section_project_button_icon" src="images/searchicon.svg" />
+											Zie project
+										</button>
 									</div>
 									<img class="slide_image"" src="images/placeholder_img.jpg" alt="" />
 								</div>
@@ -110,9 +110,9 @@
 											Accusantium atque esse incidunt error?
 										</p>
 										<button class="section_project_button">
-                                            <img class="section_project_button_icon" src="images/searchicon.svg">
-                                            Zie project
-                                        </button>
+											<img class="section_project_button_icon" src="images/searchicon.svg" />
+											Zie project
+										</button>
 									</div>
 									<img class="slide_image" src="images/placeholder_img.jpg" alt="" />
 								</div>
@@ -122,14 +122,77 @@
 				</div>
 			</section>
 			<!-- Werkervaring -->
+            <img class="section_divider" src="images/darkblue_divider.svg" alt="">
 			<section class="section" id="werkervaring_row">
 				<div class="section_inner">
-					<div class="section_header">
+					<div class="section_header section_header_lessPad">
 						<h4 class="section_subtitle title_orange">Werkervaring</h4>
 						<h3 class="section_title title_white">Welke werkervaring heb ik?</h3>
 					</div>
 					<div class="section_content">
-						<img style="width: 80%" src="images/placeholder_img.jpg" alt="" />
+						<!-- <img style="width: 80%" src="images/placeholder_img.jpg" alt="" /> -->
+						<div class="timeline">
+							<!-- Middelbare school-->
+							<div class="timeline_container timeline_leftContainer">
+								<img src="images/school.svg" />
+								<div class="timeline_textbox">
+									<h2 class="highlightedText">Vellesan College</h2>
+									<small>2011-2017</small>
+									<p>Ik heb mijn HAVO diploma behaald in 2017 aan het Vellesan College in IJmuiden. Hier heb ik het profiel 'Natuur & Gezondheid' gevolgd.</p>
+									<span class="left_container_arrow"></span>
+								</div>
+							</div>
+							<!-- Eerste Baan -->
+							<div class="timeline_container timeline_rightContainer">
+								<img src="images/work.svg" />
+								<div class="timeline_textbox">
+									<h2 class="albertHeijnBlue">Albert Heijn</h2>
+									<small>2015-Heden</small>
+									<p>Begonnen als vakkenvuller in 2015. Hierna doorgegroeid naar magazijnmedewerker bij Albert Heijn Dudokplein in IJmuiden.</p>
+									<span class="right_container_arrow"></span>
+								</div>
+							</div>
+							<!-- Opleiding -->
+							<div class="timeline_container timeline_leftContainer">
+								<img src="images/school.svg" />
+								<div class="timeline_textbox">
+									<h2 class="inhollandPink">Informatica Inholland</h2>
+									<small>2017-2022</small>
+									<p>Ik heb de opleiding informatica afgerond aan de Hogeschool Inholland in Haarlem.</p>
+									<p><strong>Derdejaars minors:</strong> 'User Experience Design' & 'Big Data & AI'</p>
+									<p><strong>Vierdejaars minors:</strong> 'Cloud & Security'</p>
+									<span class="left_container_arrow"></span>
+								</div>
+							</div>
+                            <!-- Stage 1 -->
+							<div class="timeline_container timeline_rightContainer">
+								<img src="images/school.svg" />
+								<div class="timeline_textbox">
+									<h2>Stage 1 - <span class="soliedeBlue">Soliede</span> <span class="soliedePurple">Opleidingen</span></h2>
+									<p>Onderzoek gedaan over een betere vernieuwde versie van het al bestaande RI&E-websysteem binnen Soliede. Hierbij heb ik met verschillende ‘adviseurs veiligheid’ onderzoek gedaan naar een beter werkende RI&E tool om bedrijven zo veilig mogelijk te maken.</p>
+									<span class="right_container_arrow"></span>
+								</div>
+							</div>
+                            <!-- Stage 2 -->
+							<div class="timeline_container timeline_leftContainer">
+								<img src="images/school.svg" />
+								<div class="timeline_textbox">
+									<h2>Stage 2 - <span class="tripleRed">Triple</span></h2>									
+                                    <p>Afstudeeronderzoek over het chatbotplatform van Triple genaamd 'Wozzbot'. Tijdens deze stage heb ik onderzoek gedaan naar de best practices van het bouwen/ontwerpen van een chatbot. Hierbij heb ik een proof-of-concept ontworpen/gerealiseerd voor een meer gebruiksvriendelijke versie van het Wozzbot platform.</p>
+									<span class="left_container_arrow"></span>
+								</div>
+							</div>
+                            <!-- Nieuwe baan -->
+							<div class="timeline_container timeline_rightContainer">
+								<img src="images/searchQuestion.svg" />
+								<div class="timeline_textbox">
+									<h2>De toekomst</h2>
+									<small>2023-???</small>
+									<p>Heb jij een leuke functie voor mij beschikbaar? Dan hoor ik graag wat jij mij te bieden hebt :)!</p>
+									<span class="right_container_arrow"></span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
