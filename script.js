@@ -61,7 +61,7 @@ const revealSection = function (entries, observer) {
 
 const sectionObserver = new IntersectionObserver(revealSection, {
 	root: null,
-	threshold: 0.20,
+	threshold: 0.2,
 });
 
 allSections.forEach(function (section) {
@@ -117,3 +117,22 @@ const previousSlide = function () {
 // Next/previous slidebutton eventlisteners
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', previousSlide);
+
+// 5. Calculate age dynamically
+const ageText = document.getElementById('age');
+function getAge() {
+	var today = new Date();
+	var birthDate = new Date('September 03, 1999');
+	var age = today.getFullYear() - birthDate.getFullYear();
+	var m = today.getMonth() - birthDate.getMonth();
+
+    // Check if current month are equal, if not check if date has been passed
+	if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+		age--;
+	}
+
+    // Set age in introtext dynamically
+    ageText.textContent = age;
+}
+
+getAge();
