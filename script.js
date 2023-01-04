@@ -1,17 +1,27 @@
 'use strict';
 
-// Elements
+// 0. Elements
+
+// Header/Navigation
 const header = document.querySelector('.header');
 const nav = document.querySelector('.nav');
 const logoImg = document.getElementById('nav_logoImg');
 const hamburgerBtn = document.getElementById('nav_menuBtn');
 
+// Intro section
 const introSection = document.querySelector('.intro');
 const intro_header = document.getElementById('intro_header');
 const intro_subheader = document.getElementById('intro_subheader');
 const intro_information = document.getElementById('intro_information');
 const introImg = document.getElementById('intro_img');
 
+// Portfolio Section
+const portfolio_contactMe = document.getElementById('portfolio_contactMe');
+
+// Contact Section 
+const contactRow = document.getElementById('contactRow');
+
+// Footer Section
 const backToTop_btn = document.getElementById('backToTop_btn');
 
 // 1. Sticky navigation eventlistener
@@ -134,5 +144,12 @@ function getAge() {
     // Set age in introtext dynamically
     ageText.textContent = age;
 }
-
 getAge();
+
+
+// 6. Scrolling functionality
+portfolio_contactMe.addEventListener('click', function() {
+    contactRow.scrollIntoView({
+        behavior: "smooth"
+    });
+});

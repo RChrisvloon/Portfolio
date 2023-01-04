@@ -15,10 +15,12 @@
 		<main>
 			<header class="header" id="header">
 				<nav class="nav">
-					<div class="nav_logo">
-						<img id="nav_logoImg" src="images/computer_white.svg" alt="" />
-						<p id="nav_logoName">Chris</p>
-					</div>
+					<a class="reset_a" href="">
+                        <div class="nav_logo">
+                            <img id="nav_logoImg" src="images/computer_white.svg" alt="" />
+                            <p id="nav_logoName">Chris</p>
+                        </div>
+                    </a>
 					<img id="nav_menuBtn" src="images/menu_white.svg" alt="" />
 					<ul class="nav_links">
 						<li class="nav_item">
@@ -28,10 +30,10 @@
 							<a class="nav_link" href="about.html" id="nav_about">Over mij</a>
 						</li> -->
 						<li class="nav_item">
-							<a class="nav_link" href="portfolio" id="nav_portfolio">Portfolio</a>
+							<a class="nav_link" href="#portfolio_divider_top" id="nav_portfolio">Portfolio</a>
 						</li>
 						<li class="nav_item">
-							<a class="nav_link" href="contact" id="nav_contact">Contact</a>
+							<a class="nav_link" href="#contact_row" id="nav_contact">Contact</a>
 						</li>
 					</ul>
 				</nav>
@@ -51,7 +53,7 @@
 				</section>
 			</header>
             <!-- Upside down divider-->
-            <img class="section_divider_upsidedown" src="images/darkblue_divider.svg" alt="">
+            <img class="section_divider_upsidedown" src="images/darkblue_divider.svg" id="portfolio_divider_top">
 
 			<!-- Projects -->
 			<section class="section" id="portfolio_row">
@@ -103,20 +105,18 @@
 									</div>
 									<img class="slide_image"" src="images/placeholder_img.jpg" alt="" />
 								</div>
-								<!-- Project Slide 3-->
+								<!-- Contact me -->
 								<div class="slide section_project">
 									<div class="section_projectDetails">
-										<h1>Mijn derde project</h1>
+										<h1>Programmeur nodig?</h1>
 										<p>
-											Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, quod eveniet? Quod distinctio ad illo perspiciatis corrupti at, voluptates repudiandae harum voluptate, delectus excepturi sed!
-											Accusantium atque esse incidunt error?
+											Heb jij een website nodig voor jezelf of voor je bedrijf, maar kom je er maar steeds niet aan toe? Stuur mij een bericht en dan bespreken we wat ik voor jou kan betekenen.
 										</p>
-										<button class="section_project_button">
-											<img class="section_project_button_icon" src="images/searchicon.svg" />
-											Zie project
+										<button class="section_project_button" id="portfolio_contactMe">
+											Contact me
 										</button>
 									</div>
-									<img class="slide_image" src="images/placeholder_img.jpg" alt="" />
+									<img class="slide_image" src="images/codingExample.jpg" title="Photo by Clément Hélardot on Unsplash" alt="Photo by Clément Hélardot on Unsplash" />
 								</div>
 							</div>
 						</div>
@@ -199,7 +199,7 @@
 				</div>
 			</section>
 			<!-- Contact -->
-			<section class="section" id="contactRow">
+			<section class="section" id="contact_row">
 				<div class="section_inner">
 					<div class="section_header">
 						<h4 class="section_subtitle title_orange">Contact</h4>
