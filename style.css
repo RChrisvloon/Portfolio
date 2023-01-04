@@ -13,6 +13,7 @@
 	--color-albertheijn: #00a0df;
 	--color-soliedeBlue: #009fe3;
 	--color-soliedePaars: #601f63;
+	--color-githubPaars: #82248d;
 }
 
 * {
@@ -71,6 +72,10 @@ a {
 	color: var(--color-soliedePaars);
 }
 
+.github_paars {
+	color: var(--color-githubPaars);
+}
+
 .tripleRed {
 	color: #ff4f68;
 }
@@ -95,9 +100,14 @@ a {
 	width: 35px;
 	scroll-behavior: smooth;
 }
+
 #backToTop_btn:hover {
 	background-color: var(--color-midnightblue);
 	transition: 0.7s;
+}
+
+.white_bg {
+	background-color: white;
 }
 
 /* 2. Nav styling*/
@@ -114,12 +124,16 @@ a {
 	text-shadow: -1px -1px 1px black;
 }
 
-.reset_a, .reset_a:hover, .reset_a:visited, .reset_a:focus, .reset_a:active  {
-    text-decoration: none;
-    color: inherit;
-    outline: 0;
-    cursor: pointer;
-  }
+.reset_a,
+.reset_a:hover,
+.reset_a:visited,
+.reset_a:focus,
+.reset_a:active {
+	text-decoration: none;
+	color: inherit;
+	outline: 0;
+	cursor: pointer;
+}
 
 .sticky {
 	position: fixed;
@@ -194,7 +208,7 @@ a {
 	z-index: 10;
 
 	background-image: url('images/beach_blur.jpg');
-    background-size: cover;
+	background-size: cover;
 }
 
 #intro {
