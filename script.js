@@ -36,24 +36,6 @@ window.addEventListener('scroll', function () {
 	}
 });
 
-const checkHeaderImage = function() {
-    if(window.innerWidth < 858){
-        introImg.src="images/chris_italy_wide.jpg";
-    }
-    else if(window.innerWidth == 858){
-        introImg.src="images/chris_italy_wide.jpg";
-    }
-    else{
-        introImg.src="images/chris_italy.jpg"; 
-    }
-}
-// 
-checkHeaderImage();
-
-window.addEventListener('resize', function() {
-    checkHeaderImage();
-});
-
 // 2. Scroll back to top button
 const scrollToTop = function () {
 	window.scrollTo({
