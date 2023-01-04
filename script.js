@@ -19,7 +19,7 @@ const introImg = document.getElementById('intro_img');
 const portfolio_contactMe = document.getElementById('portfolio_contactMe');
 
 // Contact Section 
-const contactRow = document.getElementById('contactRow');
+const contact_row = document.getElementById('contact_row');
 
 // Footer Section
 const backToTop_btn = document.getElementById('backToTop_btn');
@@ -144,12 +144,13 @@ function getAge() {
     // Set age in introtext dynamically
     ageText.textContent = age;
 }
+
 getAge();
 
 
 // 6. Scrolling functionality
 portfolio_contactMe.addEventListener('click', function() {
-    contactRow.scrollIntoView({
+    contact_row.scrollIntoView({
         behavior: "smooth"
     });
 });
