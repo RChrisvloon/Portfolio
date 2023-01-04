@@ -11,8 +11,8 @@
 
 	--color-inholland: #dc037c;
 	--color-albertheijn: #00a0df;
-    --color-soliedeBlue: #009fe3;
-    --color-soliedePaars: #601f63;
+	--color-soliedeBlue: #009fe3;
+	--color-soliedePaars: #601f63;
 }
 
 * {
@@ -24,7 +24,7 @@
 
 html {
 	box-sizing: border-box;
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -33,7 +33,7 @@ body {
 	color: #444;
 	background: var(--color-cultured);
 	line-height: 1.9;
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 section {
@@ -64,15 +64,15 @@ a {
 }
 
 .soliedeBlue {
-    color: var(--color-soliedeBlue);
+	color: var(--color-soliedeBlue);
 }
 
-.soliedePurple{
-    color: var(--color-soliedePaars);
+.soliedePurple {
+	color: var(--color-soliedePaars);
 }
 
 .tripleRed {
-    color: #ff4f68;
+	color: #ff4f68;
 }
 
 .lazy_img {
@@ -111,7 +111,7 @@ a {
 	z-index: 100;
 	color: white;
 	transition: 0.3s;
-    text-shadow: -1px -1px 1px black;
+	text-shadow: -1px -1px 1px black;
 }
 
 .sticky {
@@ -124,7 +124,7 @@ a {
 
 .sticky .nav_link {
 	color: black;
-    text-shadow: 0 0;
+	text-shadow: 0 0;
 }
 
 .nav_logo {
@@ -136,15 +136,15 @@ a {
 
 #nav_logoImg {
 	width: 30px;
-    filter: drop-shadow(-1px -1px 1px rgb(0 0 0 / 1));
+	filter: drop-shadow(-1px -1px 1px rgb(0 0 0 / 1));
 }
 
 .sticky #nav_logoImg {
-    filter: drop-shadow(0 0 0 rgb(0 0 0 / 1));
+	filter: drop-shadow(0 0 0 rgb(0 0 0 / 1));
 }
 
 .sticky #nav_logoName {
-    text-shadow: 0 0;
+	text-shadow: 0 0;
 }
 
 #nav_logoName {
@@ -180,12 +180,14 @@ a {
 
 /*3. Header styling*/
 .header {
-    background-image: url("images/beach_blur.jpg");
 	min-height: 500px;
 	display: flex;
 	flex-direction: column;
-    position: relative;
-    z-index: 1;
+	position: relative;
+	z-index: 1;
+
+	background-image: url('images/beach_blur.jpg');
+    background-size: cover;
 }
 
 #intro {
@@ -283,17 +285,15 @@ a {
 	transform: translateY(8rem);
 }
 
-.section_divider{
-    margin-top: -15px;
-    margin-bottom: -15px;
+.section_divider {
+	margin-top: -15px;
+	margin-bottom: -15px;
 }
 
-.section_divider_upsidedown{
-    transform: scaleY(-1);
-    margin-top: -30px;
-    margin-bottom: -30px;
-    z-index: 0;
-    position: relative;
+.section_divider_upsidedown {
+	transform: scaleY(-1);
+	margin-top: -1px;
+	margin-bottom: -30px;
 }
 
 .section_slideUp {
@@ -316,8 +316,8 @@ a {
 	flex-direction: column;
 }
 
-.section_header_lessPad{
-    padding-top: 1rem;
+.section_header_lessPad {
+	padding-top: 1rem;
 }
 
 .section_content {
@@ -452,8 +452,8 @@ a {
 .timeline {
 	position: relative;
 	max-width: 1200px;
-    margin: auto;
-    margin-top: 50px;
+	margin: auto;
+	margin-top: 50px;
 }
 
 .timeline::after {
@@ -623,8 +623,8 @@ footer {
 
 /* Mobile */
 @media only screen and (max-width: 858px) {
-    /* Nav styling*/
-    .nav_links {
+	/* Nav styling*/
+	.nav_links {
 		display: none;
 	}
 
@@ -633,11 +633,11 @@ footer {
 		cursor: pointer;
 	}
 
-    /* Intro styling */
-    #intro{
-        padding-left: 0;
-        padding-right: 0;
-    }
+	/* Intro styling */
+	#intro {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
 	.intro_right {
 		text-align: center;
@@ -656,6 +656,11 @@ footer {
 		padding-bottom: 1rem;
 	}
 
+	.section_divider_upsidedown {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
 	/* Portfolio styling */
 	.slide {
 		gap: 0.5rem;
@@ -665,38 +670,39 @@ footer {
 		width: 100%;
 	}
 
-    /* Timeline styling*/
-    .timeline{
-        margin: 50px auto;
-    }
+	/* Timeline styling*/
+	.timeline {
+		margin: 50px auto;
+	}
 
-    .timeline::after{
-        left: 31px;
-    }
+	.timeline::after {
+		left: 31px;
+	}
 
-    .timeline_container{
-        width: 100%;
-        padding-left: 80px;
-        padding-right: 25px;
-    }
+	.timeline_container {
+		width: 100%;
+		padding-left: 80px;
+		padding-right: 25px;
+	}
 
-    .timeline_textbox{
-        font-size: 13px;
-    }
+	.timeline_textbox {
+		font-size: 13px;
+	}
 
-    .timeline_rightContainer{
-        left: 0;
-    }
+	.timeline_rightContainer {
+		left: 0;
+	}
 
-    .timeline_leftContainer img, .timeline_rightContainer img {
-        left: 10px;
-    }
+	.timeline_leftContainer img,
+	.timeline_rightContainer img {
+		left: 10px;
+	}
 
-    .left_container_arrow {
-        border-right: 15px solid #fff;
-        border-left: 0;
-        left: -15px;
-    }
+	.left_container_arrow {
+		border-right: 15px solid #fff;
+		border-left: 0;
+		left: -15px;
+	}
 
 	/*Footer styling*/
 	footer {
