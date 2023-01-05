@@ -18,7 +18,7 @@ const introImg = document.getElementById('intro_img');
 // Portfolio Section
 const portfolio_contactMe = document.getElementById('portfolio_contactMe');
 
-// Contact Section 
+// Contact Section
 const contact_row = document.getElementById('contact_row');
 
 // Footer Section
@@ -136,21 +136,20 @@ function getAge() {
 	var age = today.getFullYear() - birthDate.getFullYear();
 	var m = today.getMonth() - birthDate.getMonth();
 
-    // Check if current month are equal, if not check if date has been passed
+	// Check if current month are equal, if not check if date has been passed
 	if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
 		age--;
 	}
 
-    // Set age in introtext dynamically
-    ageText.textContent = age;
+	// Set age in introtext dynamically
+	ageText.textContent = age;
 }
 
 getAge();
 
-
 // 6. Scrolling functionality
-portfolio_contactMe.addEventListener('click', function() {
-    contact_row.scrollIntoView({
-        behavior: "smooth"
-    });
+portfolio_contactMe.addEventListener('click', function () {
+	contact_row.scrollIntoView({
+		behavior: 'smooth',
+	});
 });
