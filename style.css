@@ -1,6 +1,6 @@
 /*1. General styling*/
 :root {
-	--colro-darkblue: #021b79;
+	--color-darkblue: #021b79;
 	--color-midnightblue: #2980b9;
 	--color-brightnavyblue: #6dd5fa;
 	--color-safetyorange: #f17105;
@@ -296,7 +296,7 @@ a {
 
 /*4. Section styling */
 .section {
-	min-height: 37rem;
+	min-height: 35rem;
 	width: 100%;
 	display: flex;
 }
@@ -458,16 +458,16 @@ a {
 }
 
 .slider_btnLeft {
-	background-color: var(--colro-darkblue);
+	background-color: var(--color-darkblue);
 }
 
 .slider_btnRight {
-	background-color: var(--colro-darkblue);
+	background-color: var(--color-darkblue);
 }
 
 /*4.2 Werkervaring Section*/
 #werkervaring_row {
-	background-color: var(--colro-darkblue);
+	background-color: var(--color-darkblue);
 }
 
 .timeline {
@@ -618,6 +618,35 @@ a {
 	border-color: var(--color-safetyorange);
 }
 
+/* Contact styling*/
+.contact_section{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+
+.contact_section_info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    font-weight: bold;
+    color: var(--color-darkblue);   
+}
+
+.contact_section_info_center{
+    display: flex;
+    align-items: center;
+}
+
+.contact_section_textbox{
+    max-width: 55%
+}
+
+.contact_link{
+    color: var(--color-safetyorange) !important;
+}
+
 /*Footer*/
 footer {
 	background: #000046;
@@ -724,6 +753,16 @@ footer {
 		border-left: 0;
 		left: -15px;
 	}
+
+    /* Contact styling*/
+    .contact_section{
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+    
+    .contact_section_textbox{
+        max-width: 100%;
+    }
 
 	/*Footer styling*/
 	footer {
