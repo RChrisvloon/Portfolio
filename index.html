@@ -10,33 +10,6 @@
 		<link rel="stylesheet" href="style.css" />
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" />
 		<title>Chris van Loon 💻 - Portfolio</title>
-
-		<!-- EmailJS -->
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-		<script type="text/javascript">
-			(function () {
-				emailjs.init('ZibEPBSNaIKil3GQ1');
-			})();
-		</script>
-		<script type="text/javascript">
-			window.onload = function () {
-				document.getElementById('contact-form').addEventListener('submit', function (event) {
-					event.preventDefault();
-					this.contact_number.value = (Math.random() * 100000) | 0;
-					emailjs.sendForm('service_9u4pnpp', 'template_pebx0rk', this).then(
-						function () {
-							console.log('SUCCESS!');
-						},
-						function (error) {
-							console.log('FAILED...', error);
-						}
-					);
-				});
-			};
-		</script>
-
-		<!-- reCAPTCHA v2 -->
-		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head>
 	<body>
 		<main>
@@ -225,8 +198,7 @@
 						<h3 class="section_title">Ik sta open voor een gesprek!</h3>
 					</div>
 					<div class="section_content">
-						<form id="contact-form" class="section_form">
-							<input type="hidden" name="contact_number" />
+						<form class="section_form">
 							<label for="name"> Name<span class="section_form_required">*</span> </label>
 							<input type="text" name="name" placeholder="Uw naam" required />
 
@@ -234,9 +206,8 @@
 							<input type="text" name="email" placeholder="Uw emailadres" required />
 
 							<label for="message"> Message<span class="section_form_required">*</span> </label>
-							<textarea class="section_form_textarea" rows="10" name="message" placeholder="Beste Chris, ik zou het graag willen hebben over..." required></textarea>
-                            <div class="g-recaptcha" data-sitekey="6LdUqdMjAAAAAGgC0a1DbkkrIbd_zLJmGfBHsULE"></div>
-							<input class="section_form_button" type="submit" value="Send" />
+							<textarea class="section_form_textarea" rows="10" placeholder="Beste Chris, ik zou het graag willen hebben over..." required></textarea>
+							<button class="section_form_button">Send</button>
 						</form>
 					</div>
 				</div>
